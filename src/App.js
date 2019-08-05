@@ -1,6 +1,6 @@
 import React from 'react';
-import CommentForm from './CommentForm/CommentForm';
-import CommentList from './CommentList/CommentList';
+import CommentForm from './components/CommentForm/CommentForm';
+import CommentList from './components/CommentList/CommentList';
 import './App.css';
 
 const App = () => (

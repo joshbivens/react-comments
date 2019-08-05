@@ -1,4 +1,4 @@
-import React from 'react';
+import React from './node_modules/react';
 import './Comment.css'
 
 const Comment = ({username, comment, time}) => (
