@@ -1,5 +1,6 @@
-import React from './node_modules/react';
-import Comment from '../../Comment/Comment';
+import React from 'react';
+import Comment from '../Comment/Comment';
+import { database } from '../../config/constants';
 import './CommentList.css'
 
 class CommentList extends React.Component {
@@ -10,7 +11,7 @@ class CommentList extends React.Component {
     }
   }
   componentWillMount() { // [2]
-    const db = firebase.database().ref('comments');
+    const db = database.ref('comments');
     const MAX_COUNT = 9;
     db.on('value', (snapshot) => {
       if (snapshot.numChildren() > MAX_COUNT) {
@@ -26,7 +27,7 @@ class CommentList extends React.Component {
     });
   }
   componentDidMount() {
-    const db = firebase.database().ref('comments');
+    const db = database.ref('comments');
     
     db.on('value', (snapshot) => {
       const comments = snapshot.val();
