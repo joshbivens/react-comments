@@ -1,4 +1,4 @@
-## React Comments
+# React Comments
 
 [Demo here](https://codepen.io/joshbivens/pen/rReZpJ?editors=0110)
 
