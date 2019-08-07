@@ -49,8 +49,9 @@ class CommentList extends React.Component {
     return (
       <div className="comments-list">
         {
-          this.state.comments.map(comment => (
+          this.state.comments.map((comment, i) => (
             <Comment
+              key={i}
               username={comment.username}
               comment={comment.comment}
               time={comment.time}
